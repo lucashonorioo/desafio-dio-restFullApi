@@ -6,6 +6,7 @@ Java RESTful API criada para a Sandander Dev Week
 ```mermaid
 classDiagram
     class User {
+        -long id
         -String name
         -Account account
         -Features[] features
@@ -14,6 +15,7 @@ classDiagram
     }
 
     class Account {
+        -long id
         -String number
         -String agency
         -String balance
@@ -21,16 +23,19 @@ classDiagram
     }
 
     class Features {
+        -long id
         -String icon
         -String description
     }
 
     class Card {
+        -long id
         -String number
         -String limit
     }
 
     class News {
+        -long id
         -String icon
         -String description
     }
