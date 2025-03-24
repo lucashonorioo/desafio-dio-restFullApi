@@ -12,7 +12,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
@@ -30,8 +30,8 @@ public class User {
         return id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
     public Account getAccount() {
