@@ -7,7 +7,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @OpenAPIDefinition(
-		info = @Info(title = "API Santander Dev Week", version = "1.0", description = "Documentação da API")
+		info = @Info(title = "API Santander Dev Week", version = "1.0", description = "Documentação da API"),
+		servers = {
+				@Server(url = "/", description = "Local"),
+				@Server(url = "desafio-dio-restfullapi-prd.up.railway.app", description = "Railway")
+		}
 )
 @SpringBootApplication
 public class Application {
