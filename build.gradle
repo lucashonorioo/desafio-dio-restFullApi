@@ -39,3 +39,14 @@ tasks.jar{
 tasks.named('test') {
 	useJUnitPlatform()
 }
+springBoot {
+	buildInfo {
+		properties {
+			additionalProperties = [
+					"springdoc.api-docs.enabled": "true",
+					"springdoc.swagger-ui.enabled": "true",
+					"springdoc.swagger-ui.path": "/swagger-ui.html"
+			]
+		}
+	}
+}
