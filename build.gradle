@@ -42,11 +42,9 @@ tasks.named('test') {
 springBoot {
 	buildInfo {
 		properties {
-			additionalProperties = [
-					"springdoc.api-docs.enabled": "true",
-					"springdoc.swagger-ui.enabled": "true",
-					"springdoc.swagger-ui.path": "/swagger-ui.html"
-			]
+			property 'springdoc.api-docs.enabled', 'true'
+			property 'springdoc.swagger-ui.enabled', 'true'
+			property 'springdoc.swagger-ui.path', '/swagger-ui.html'
 		}
 	}
 }
